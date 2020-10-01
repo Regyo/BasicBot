@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "!"
+const prefix = "r!"
 
 client.on('message', msg => {
-    if(msg.content == `${prefix}ping`) {
-        msg.channel.send(client.ping);
+    if(msg.content.startsWith('r!ping')) {
+        msg.channel.reply(client.ping);
     }
 });
 
